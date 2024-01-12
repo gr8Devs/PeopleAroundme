@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">Want to know what secret people hold around you?</h1>
+      </div>
+      <div class="gif_container">
+        <div class="tenor-gif-embed" data-postid="16536108" data-share-method="host" data-aspect-ratio="1.30612" data-width="30%" justify-content="center" align-item="center"><a href="https://tenor.com/view/side-eye-shady-eyes-dog-shifty-gif-16536108">Side Eye Shady GIF</a>from <a href="https://tenor.com/search/side+eye-gifs">Side Eye GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      </div>
+      <div class="buttons">
+        <button class="btn" id="yesButton">Yes</button>
+        <audio id="myAudio" src="./assets/testAudio.mp3"></audio>
+        <button
+          class="btn"
+          id="noButton"
+          onmouseover="moveButton()"
+          onclick="moveButton()"
+        >
+          No
+        </button>
+
+        <script>
+          function nextPage() {
+            window.location.href = "yes.html";
+          }
+
+          document.getElementById('yesButton').addEventListener('click', function() {
+                var audio = document.getElementById('myAudio');
+                audio.play();
+            });
+
+          function moveButton() {
+            var x =
+              Math.random() *
+              (window.innerWidth -
+                document.getElementById("noButton").offsetWidth);
+            var y =
+              Math.random() *
+              (window.innerHeight -
+                document.getElementById("noButton").offsetHeight);
+            document.getElementById("noButton").style.left = `${x}px`;
+            document.getElementById("noButton").style.top = `${y}px`;
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
